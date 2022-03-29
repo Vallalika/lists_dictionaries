@@ -72,16 +72,34 @@ if 2 in numbers:
 
     print(f"My sum is: {sum}")
 
-# 5. HARD! Print the sum of the numbers. 
+# 5. HARD! Print the sum of the numbers.
 #    Except the number 13 is very unlucky, so it does not count.
 #    And numbers that come immediately after a 13 also do not count.
 #    HINT - You will need to track the index throughout the loop.
 #
-#    So [5, 13, 2] would have sum of 5. 
+#    So [5, 13, 2] would have sum of 5.
+    print("")
+    print("Exercise 5:")
+    print("")
 
+    numbers = [5, 5, 5, 5, 5, 5, 5, 5, 13, 2, 18, 19, 20]
+    
+    sum_5 = 0
+    ignore_5 = 0
 
+    # Initiate a for loop for every NUMBER in NUMBERS
+    for number in numbers:
 
+        # If NUMBER is equal to 13:
+        if (number == 13):
+            # Store it in the IGNORE variable
+            ignore_5 = number
 
+        # Otherwise i.e. the number is not 13
+        else:
+            if (ignore_5 != 13):
+                # Add NUMBER to SUM variable
+                sum_5 += number
 
-
+    print(f"My sum for exercise 5 is: {sum_5}")
 
