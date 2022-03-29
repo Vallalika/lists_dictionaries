@@ -23,30 +23,23 @@ diff = numbers[-1] - numbers[0]
 print(diff)
 
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
-# print("Exercise 3:")
-# print(numbers)
+print("")
+print("Exercise 3:")
+print("")
 
-# # for each number in the list
-# for number in numbers:
-#     print("My number is ", number)
-
-#     # track 2s
-#     temp = 0
-
-#     # if my number is 2 and temp is not 2:
-#     if number == 2 and temp != 2:
-#         print("entering number == 2 and temp != 2")
-
-#         # store number in temp variable
-#         temp = 2
-#         print("value of temp is", temp)
-
-#     # if my number is 2 and temp is also 2:
-#     elif number == 2 and temp == 2:
-
-#         # return True and break out of the loop
-#         print(True)
-#         break
+# is there a 2 in NUMBERS?
+if 2 in numbers:
+    # if yes, loop through every NUMBER in NUMBERS
+    for number in numbers:
+        # If NUMBER is 2
+        if number == 2:
+            # Find out its index and store it in INDEX
+            index = numbers.index(number)
+            # If INDEX is not the last one in the list and also the next number up is a 2
+            if (index != len(numbers)-1) and (numbers[index+1] == 2):
+                # then print True and break out of the loop
+                print("True")
+                break   
 
 # 4. Print the sum of the numbers, 
 #    BUT ignore any section of numbers starting with a 6 and extending to the next 7.
