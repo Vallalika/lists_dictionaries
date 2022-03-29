@@ -45,7 +45,32 @@ if 2 in numbers:
 #    BUT ignore any section of numbers starting with a 6 and extending to the next 7.
 #    
 #    So [11, 6, 4, 99, 7, 11] would have sum of 22
+    
+    # Set up a SUM variable to add on to it, and an IGNORE variable to keep track of 6 and 7
+    numbers = [11, 99, 6, 4, 99, 7, 11]
+    
+    sum = 0
+    ignore = 0
 
+    # Initiate a for loop for every NUMBER in NUMBERS
+    for number in numbers:
+
+        # If NUMBER is equal to 6 or 7:
+        if (number == 6) or (number == 7):
+
+            # Store it in the IGNORE variable
+            ignore = number
+
+        # Otherwise i.e. the number is neither a 6 nor a 7
+        else:
+
+            # If the value of IGNORE is NOT 6
+            if ignore != 6:
+
+                # Add NUMBER to SUM variable
+                sum += number
+
+    print(f"My sum is: {sum}")
 
 # 5. HARD! Print the sum of the numbers. 
 #    Except the number 13 is very unlucky, so it does not count.
